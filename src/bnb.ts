@@ -30,7 +30,7 @@ const client = createWalletClient({
 
 const ARTIFACTS_PATH = "./artifacts/contracts/exchange-protocol/contracts/";
 
-async function estimateSwapContractsGas() {
+export async function estimateGasForBNB() {
     const factoryContractPath = path.join(ARTIFACTS_PATH, "PancakeFactory.sol/PancakeFactory.json")
     const factoryContractArtifact = await fs.readFile(factoryContractPath, "utf-8")
 
@@ -128,4 +128,4 @@ async function estimateSwapContractsGas() {
     console.log(`TCO (Swap Tokens): ${totalGas}`)
 }
 
-estimateSwapContractsGas().catch(console.error)
+estimateGasForBNB().catch(console.error);
