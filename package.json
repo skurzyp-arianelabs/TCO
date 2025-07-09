@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:bnb": "tsx src/bnb.ts",
-    "dev:arbitrum": "tsx src/arbitrum.ts"
+    "dev:arbitrum": "tsx src/arbitrum.ts",
+    "dev:base": "tsx src/base.ts"
   },
   "keywords": [],
   "author": "",
