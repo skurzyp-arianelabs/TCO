@@ -31,6 +31,8 @@ const client = createWalletClient({
 const ARTIFACTS_PATH = "./artifacts/contracts/exchange-protocol/contracts/";
 
 export async function estimateGasForBNB() {
+    console.log("TCO FOR BNB\n\n")
+
     const factoryContractPath = path.join(ARTIFACTS_PATH, "PancakeFactory.sol/PancakeFactory.json")
     const factoryContractArtifact = await fs.readFile(factoryContractPath, "utf-8")
 
@@ -52,6 +54,7 @@ export async function estimateGasForBNB() {
 
     console.log("deploy factory gas estimate: ", formatUnits(deployFactoryEstimatedGas, 18))
 
+    //The pair must not exist to estimate the gas needed for its creation.
     const TOKEN_1_ADDRESS = "0x9D173E6c594f479B4d47001F8E6A95A7aDDa42bC"
     const TOKEN_2_ADDRESS = "0xfb5B838b6cfEEdC2873aB27866079AC55363D37E"
 
@@ -86,9 +89,11 @@ export async function estimateGasForBNB() {
 
     console.log("deploy router gas estimate: ", formatUnits(deployRouterEstimatedGas, 18) )
 
+    //The pair must exist to test the swap
     const SWAP_TOKEN_1_ADDRESS = "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
     const SWAP_TOKEN_2_ADDRESS = "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"
 
+    //Values must be correct
     const amountIn = parseUnits('0.1', 18);
     const amountOutMin = parseUnits('0.04', 18);
     const swapPath = [SWAP_TOKEN_1_ADDRESS, SWAP_TOKEN_2_ADDRESS];
