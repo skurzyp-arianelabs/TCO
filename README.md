@@ -1,13 +1,15 @@
-# Sample Hardhat Project
+# TCO
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+## Run Localy
 
-Try running some of the following tasks:
+required wallet with:
+- Minimal value of BNB tokens just to estimate gas and call allowance
+- 0.1 USDC on BNB Chain for estimate gas
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+1. Clone repo
+2. `pnpm install`
+3. Create `.env` and pass PRIVATE_KEY
+4. `pnpm dev`
+
+## Example output
+![example output](docs/example-output.png)
