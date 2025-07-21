@@ -1,5 +1,5 @@
 {
-  "name": "TCO",
+  "name": "tco",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,10 @@
     "dev:arbitrum": "tsx src/arbitrum.ts",
     "dev:base": "tsx src/base.ts",
     "dev:eth": "tsx src/eth.ts",
-    "dev:bnb2": "tsx src/bnb-refactored.ts"
+    "dev:bnb2": "tsx src/bnb-refactored.ts",
+    "dev:base2": "tsx src/base-refactored.ts",
+    "dev:arbitrum2": "tsx src/arbitrum-refactored.ts",
+    "dev:eth2": "tsx src/eth-refactored.ts"
   },
   "keywords": [],
   "author": "",
